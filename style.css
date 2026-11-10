@@ -1,0 +1,363 @@
+/* =====================================================
+   1. ОСНОВНЫЕ НАСТРОЙКИ
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #212124;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Контейнер для центрирования */
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =====================================================
+   2. ШАПКА
+   ===================================================== */
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.header-inner,
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 76px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    font-family: 'Times New Roman', Times, serif; /* Изменено на Times */
+}
+
+.logo span {
+    color: #D4AF37; /* Золотисто-янтарный цвет (вместо оранжевого) */
+}
+
+.navigation {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    color: #555b63;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #D4AF37;
+}
+
+/* =====================================================
+   3. ГЕРОЙ-СЕКЦИЯ (Верхний баннер)
+   ===================================================== */
+
+.hero {
+    /* Градиент в стиле Польши: глубокий синий и благородный бордовый/золотой */
+    background: linear-gradient(135deg, #1A2A40 0%, #2C1B2D 50%, #8B3A3A 100%);
+    color: #ffffff;
+    padding: 120px 0;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    color: #D4AF37; /* Золотистый цвет */
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: 'Times New Roman', Times, serif; /* Изменено на Times */
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.hero-description {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    font-family: Arial, sans-serif;
+}
+
+.button-light {
+    background-color: #ffffff;
+    color: #1A2A40;
+}
+
+.button-light:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.button-dark {
+    background-color: #1A2A40;
+    color: #ffffff;
+    width: 100%;
+}
+
+.button-dark:hover {
+    background-color: #2C1B2D;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   4. СЕКЦИИ (Общие стили)
+   ===================================================== */
+
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif; /* Изменено на Times */
+    font-size: 40px;
+    margin-bottom: 24px;
+    color: #1A2A40;
+    font-weight: 700;
+}
+
+.section-desc {
+    font-size: 18px;
+    color: #555b63;
+    max-width: 700px;
+    margin-bottom: 48px;
+}
+
+/* =====================================================
+   5. БЛОК "О МЕРОПРИЯТИИ" (Карточки)
+   ===================================================== */
+
+.about {
+    background-color: #f9f9f9;
+}
+
+.features {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    flex: 1;
+    min-width: 250px;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-top: 4px solid #D4AF37;
+}
+
+.feature-num {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-bottom: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #1A2A40;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.feature-card p {
+    color: #555b63;
+    font-size: 15px;
+}
+
+/* =====================================================
+   6. ПРОГРАММА
+   ===================================================== */
+
+.program {
+    background-color: #ffffff;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 800px;
+}
+
+.schedule-item {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+}
+
+.time {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D4AF37;
+    min-width: 80px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.schedule-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #1A2A40;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.schedule-content p {
+    color: #555b63;
+}
+
+/* =====================================================
+   7. ФОРМА ЗАЯВКИ
+   ===================================================== */
+
+.application {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.application-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.application-text h2 {
+    margin-bottom: 16px;
+}
+
+.form-wrapper {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #1A2A40;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+
+/* =====================================================
+   8. ПОДВАЛ
+   ===================================================== */
+
+.footer {
+    background-color: #1A2A40; /* Темно-синий, как в шапке */
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.footer-inner {
+    justify-content: center;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+/* =====================================================
+   9. АДАПТИВНОСТЬ
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .application-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .navigation {
+        gap: 16px;
+    }
+
+    .schedule-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

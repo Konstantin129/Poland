@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конференция.Польша</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                Конференция<span>.Польша</span>
+            </a>
+            <nav class="navigation">
+                <a href="#about">О конференции</a>
+                <a href="#program">Программа</a>
+                <a href="#application">Заявка</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ПЕРВЫЙ ЭКРАН: ГЕРОЙ -->
+        <section class="hero">
+            <div class="container">
+                <p class="eyebrow">Ежегодная встреча специалистов в Варшаве</p>
+                <h1>Идеи, которые<br>меняют Европу</h1>
+                <p class="hero-description">
+                    Обсуждаем технологии, делимся опытом и знакомимся с людьми, 
+                    которые создают новые цифровые продукты в Польше и за её пределами.
+                </p>
+                <a class="button button-light" href="#application">Подать заявку</a>
+            </div>
+        </section>
+
+        <!-- БЛОК О МЕРОПРИЯТИИ -->
+        <section class="about" id="about">
+            <div class="container">
+                <p class="eyebrow">О мероприятии</p>
+                <h2>Лучше, чем конференция</h2>
+                <p class="section-desc">
+                    Один день лекций, практических выступлений и знакомств. 
+                    Для начинающих специалистов и тех, кто уже работает в IT-сфере Польши.
+                </p>
+
+                <div class="features">
+                    <div class="feature-card">
+                        <p class="feature-num">01</p>
+                        <h3>Полезные доклады</h3>
+                        <p>Практические знания от специалистов из ведущих компаний Польши.</p>
+                    </div>
+                    <div class="feature-card">
+                        <p class="feature-num">02</p>
+                        <h3>Новые знакомства</h3>
+                        <p>Возможность найти коллег, команду или наставника в Варшаве.</p>
+                    </div>
+                    <div class="feature-card">
+                        <p class="feature-num">03</p>
+                        <h3>Живое общение</h3>
+                        <p>Обсуждаем идеи и задаём вопросы спикерам за чашкой кофе.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПРОГРАММА -->
+        <section class="program" id="program">
+            <div class="container">
+                <p class="eyebrow">Расписание</p>
+                <h2>Программа дня</h2>
+
+                <div class="schedule">
+                    <div class="schedule-item">
+                        <span class="time">10:00</span>
+                        <div class="schedule-content">
+                            <h3>Регистрация участников</h3>
+                            <p>Знакомство и приветственный кофе.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">11:00</span>
+                        <div class="schedule-content">
+                            <h3>Технологии и люди</h3>
+                            <p>Выступления приглашённых специалистов.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="time">14:00</span>
+                        <div class="schedule-content">
+                            <h3>Практические сессии</h3>
+                            <p>Разбираем реальные задачи и решения.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ФОРМА ЗАЯВКИ -->
+        <section class="application" id="application">
+            <div class="container application-grid">
+                <div class="application-text">
+                    <p class="eyebrow">Участие</p>
+                    <h2>Оставить заявку</h2>
+                    <p>Заполните форму, чтобы сообщить организаторам о своём желании принять участие в конференции.</p>
+                </div>
+
+                <div class="form-wrapper">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" placeholder="Например, Анна Иванова" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Электронная почта</label>
+                            <input type="email" id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="format">Формат участия</label>
+                            <select id="format">
+                                <option value="">Выберите формат</option>
+                                <option value="offline">Офлайн (Варшава)</option>
+                                <option value="online">Онлайн</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Комментарий</label>
+                            <textarea id="comment" rows="4" placeholder="Что вам интересно узнать?"></textarea>
+                        </div>
+                        <button type="submit" class="button button-dark">Отправить заявку</button>
+                        <p class="form-note">Учебный пример: данные формы пока никуда не отправляются.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© 2026 Конференция.PL. Учебный проект</p>
+        </div>
+    </footer>
+
+</body>
+</html>
