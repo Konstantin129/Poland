@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — Конференция.Польша</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Конференция<span>.Польша</span></a>
+            <nav class="navigation" aria-label="Основная навигация">
+                <a href="index.html#about">О конференции</a>
+                <a href="index.html#program">Программа</a>
+                <a href="index.html#application">Заявка</a>
+                <a class="nav-auth" href="login.html" aria-current="page">Вход / Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container auth-grid">
+                <div class="form-wrapper">
+                    <h1 class="auth-title">Регистрация</h1>
+                    <p class="auth-description">Создайте аккаунт участника конференции.</p>
+
+                    <form class="application-form" action="#" method="post" onsubmit="event.preventDefault(); this.querySelector('.form-feedback').hidden = false;">
+                        <div class="form-group">
+                            <label for="username">Имя пользователя</label>
+                            <input type="text" id="username" name="username" autocomplete="username" minlength="3" placeholder="Придумайте имя" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Электронная почта</label>
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Придумайте пароль</label>
+                            <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" placeholder="Не менее 8 символов" required>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="reg-agree" name="agree" required>
+                            <label for="reg-agree">Я понимаю, что это учебный макет и аккаунт пока не создаётся.</label>
+                        </div>
+                        <button type="submit" class="button button-dark">Регистрация</button>
+                        <p class="form-note">Учебный макет: аккаунты пока не создаются и данные не сохраняются.</p>
+                        <p class="form-feedback" role="status" aria-live="polite" hidden>Форма проверена. Для создания аккаунта требуется PHP и база данных.</p>
+                    </form>
+                    <p class="auth-switch">Уже есть аккаунт? <a href="login.html">Войти</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© 2026 Конференция.PL. Учебный проект</p>
+        </div>
+    </footer>
+</body>
+</html>

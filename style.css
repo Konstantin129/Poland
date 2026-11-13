@@ -361,3 +361,267 @@ h2 {
         gap: 8px;
     }
 }
+
+/* =====================================================
+   10. ДОПОЛНЕНИЯ ПО ПРИМЕРУ POPA.CSS
+   Названия исходных классов и градиент .hero сохранены.
+   ===================================================== */
+
+/* Подвал остаётся снизу даже на коротких страницах входа. */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Ссылка на вход в шапке. */
+.navigation {
+    align-items: center;
+}
+
+.navigation .nav-auth {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 8px 15px;
+    border: 1px solid #D4AF37;
+    border-radius: 6px;
+    color: #1A2A40;
+    font-weight: 700;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navigation .nav-auth:hover,
+.navigation .nav-auth[aria-current="page"] {
+    background-color: #1A2A40;
+    color: #ffffff;
+}
+
+/* Улучшения полей и карточек из исходных примеров. */
+.feature-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(26, 42, 64, 0.10);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    color: #1A2A40;
+    background-color: #ffffff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #858b96;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.16);
+}
+
+/* Состояния кнопок и ссылок для клавиатуры. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 3px;
+}
+
+/* Подсказка показывается только после попытки отправить демо-форму. */
+.form-feedback {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-left: 3px solid #D4AF37;
+    border-radius: 4px;
+    background-color: #faf6e8;
+    color: #1A2A40;
+    font-size: 14px;
+}
+
+.form-feedback[hidden] {
+    display: none;
+}
+
+/* =====================================================
+   11. ВХОД И РЕГИСТРАЦИЯ (по примерам 13.html / 14.html)
+   ===================================================== */
+.auth-section {
+    min-height: calc(100vh - 192px);
+    display: flex;
+    align-items: center;
+    padding: 75px 0;
+    background: #f9f9f9;
+}
+
+.auth-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 480px);
+    justify-content: center;
+}
+
+.auth-grid .form-wrapper {
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    border-top: 4px solid #D4AF37;
+    box-shadow: 0 10px 30px rgba(26, 42, 64, 0.07);
+}
+
+.auth-title {
+    margin-bottom: 10px;
+    font-size: 38px;
+    line-height: 1.15;
+}
+
+.auth-description {
+    margin-bottom: 28px;
+    color: #555b63;
+    font-size: 15px;
+}
+
+.auth-switch {
+    margin-top: 20px;
+    color: #555b63;
+    font-size: 14px;
+    text-align: center;
+}
+
+.auth-switch a {
+    color: #8B3A3A;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.auth-switch a:hover {
+    color: #1A2A40;
+}
+
+/* Чекбокс в форме регистрации; адаптирован из popa.css. */
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none;
+    flex: 0 0 21px;
+    width: 21px;
+    height: 21px;
+    margin-top: 1px;
+    padding: 0;
+    border: 2px solid #D4AF37;
+    border-radius: 5px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background: #1A2A40;
+    border-color: #1A2A40;
+    box-shadow: inset 0 0 0 4px #ffffff;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #555b63;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 85px 0;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .features {
+        gap: 18px;
+    }
+
+    .application-grid {
+        gap: 30px;
+    }
+
+    .auth-section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navigation {
+        gap: 10px 16px;
+        justify-content: center;
+    }
+
+    .navigation a {
+        font-size: 13px;
+    }
+
+    .navigation .nav-auth {
+        padding: 6px 10px;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 10vw, 42px);
+    }
+
+    .hero-description,
+    .section-desc {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .feature-card {
+        min-width: 0;
+        flex-basis: 100%;
+    }
+
+    .form-wrapper {
+        padding: 26px 20px;
+    }
+
+    .auth-title {
+        font-size: 32px;
+    }
+
+    .footer-inner {
+        text-align: center;
+    }
+}

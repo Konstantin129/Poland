@@ -18,6 +18,7 @@
                 <a href="#about">О конференции</a>
                 <a href="#program">Программа</a>
                 <a href="#application">Заявка</a>
+                <a class="nav-auth" href="login.html">Вход / Регистрация</a>
             </nav>
         </div>
     </header>
@@ -108,29 +109,30 @@
                 </div>
 
                 <div class="form-wrapper">
-                    <form action="#" method="POST">
+                    <form action="#" method="post" class="application-form" onsubmit="event.preventDefault(); this.querySelector('.form-feedback').hidden = false;">
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" id="name" placeholder="Например, Анна Иванова" required>
+                            <input type="text" id="name" name="name" autocomplete="name" placeholder="Например, Анна Иванова" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Электронная почта</label>
-                            <input type="email" id="email" placeholder="name@example.com" required>
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required>
                         </div>
                         <div class="form-group">
                             <label for="format">Формат участия</label>
-                            <select id="format">
-                                <option value="">Выберите формат</option>
+                            <select id="format" name="format" required>
+                                <option value="" selected disabled>Выберите формат</option>
                                 <option value="offline">Офлайн (Варшава)</option>
                                 <option value="online">Онлайн</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="comment">Комментарий</label>
-                            <textarea id="comment" rows="4" placeholder="Что вам интересно узнать?"></textarea>
+                            <textarea id="comment" name="comment" rows="4" placeholder="Что вам интересно узнать?"></textarea>
                         </div>
                         <button type="submit" class="button button-dark">Отправить заявку</button>
                         <p class="form-note">Учебный пример: данные формы пока никуда не отправляются.</p>
+                        <p class="form-feedback" role="status" aria-live="polite" hidden>Форма заполнена. Чтобы заявки сохранялись, нужно подключить серверную обработку.</p>
                     </form>
                 </div>
             </div>
